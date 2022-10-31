@@ -1,13 +1,14 @@
 import { createContext, useState } from 'react';
 
 const MessageContext = createContext();
+const DB_URL = process.env.DB_SERVER_URL;
 
 export const MessageProvider = ({children}) => {
     const [isLoading, setIsLoading] = useState(true);
     const [message, setMessage] = useState('');
 
     const newMessage = async (msg) => {
-        const response = await fetch('/message', {method: 'POST', headers: {'Content-Type': 'application/json'},
+        const response = await fetch(`${DB_URL}/message`, {method: 'POST', headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(msg)});
 
         const data = await response.json();
@@ -16,7 +17,7 @@ export const MessageProvider = ({children}) => {
     }
 
     const getMessage = async () => {
-        const response = await fetch('/message', {method: 'GET'});
+        const response = await fetch(`${DB_URL}/message`, {method: 'GET'});
         const data = await response.json();
         console.log(data);
         setMessage(data);
@@ -24,7 +25,7 @@ export const MessageProvider = ({children}) => {
     }
 
     const deleteMessage = async (id) => {
-        await fetch(`/message/${id}`, {method: 'DELETE'});
+        await fetch(`${DB_URL}/message/${id}`, {method: 'DELETE'});
         setMessage(message.filter((item) => item.id === id));
     }
 
