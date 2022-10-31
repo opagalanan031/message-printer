@@ -1,7 +1,7 @@
 {
   "name": "message-printer",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://message-printer-ms91bx9ht-opagalanan031.vercel.app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000",
+    "server": "json-server --watch db.json",
     "dev": "concurrently \"npm run server\" \"npm start\""
   },
   "eslintConfig": {
