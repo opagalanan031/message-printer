@@ -29,7 +29,7 @@ function ShowMessage() {
       </div>
       <div className='row w-25 mt-4 mx-auto'>
         <Link to='/' className='btn btn-lg btn-dark fw-bold' onClick={onClick}>     
-            Back to Home
+           Home
         </Link>
       </div>
     </div>

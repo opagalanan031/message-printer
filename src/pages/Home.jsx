@@ -4,7 +4,7 @@ import MessageInput from '../components/MessageInput';
 function Home() {
   return (
     <div className='container'>
-        <div className="p-5">    
+        <div className="py-5">    
             <MessageInput />
         </div>
     </div>
