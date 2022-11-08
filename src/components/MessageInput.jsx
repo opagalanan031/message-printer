@@ -8,7 +8,7 @@ function MessageInput() {
 
   const navigate = useNavigate();
 
-  const { newMessage, getMessage } = useContext(MessageContext);
+  const { newMessage } = useContext(MessageContext);
 
   const onChange = (e) => setMsg(e.target.value);
 
@@ -23,7 +23,6 @@ function MessageInput() {
     }
 
       newMessage(newMsg);
-      getMessage();
       navigate('/show-message');
       setMsg('');
     }
