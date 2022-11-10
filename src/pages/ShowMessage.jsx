@@ -21,7 +21,7 @@ function ShowMessage() {
 
   return (
     <div className='container mt-5 mx-auto'>
-      <div className='row p-5 text-center fw-bold fs-1 w-75 mx-auto border border-3 border-dark rounded-4'>
+      <div className='row p-5 text-center fw-bold fs-1 w-75 mx-auto border border-3 border-dark rounded-4 shadow message'>
         {/*Somewhat working, loads new message slowly, shows previous message before loading new message*/}
         {/* <p className='my-auto'>{message[message.length-1].msg}</p> */}
 
@@ -29,7 +29,7 @@ function ShowMessage() {
       </div>
       <div className='row w-25 mt-4 mx-auto'>
         <Link to='/' className='btn btn-lg btn-dark fw-bold' onClick={onClick}>     
-           Home
+           Back
         </Link>
       </div>
     </div>
@@ -37,5 +37,3 @@ function ShowMessage() {
 }
 
 export default ShowMessage;
-
-// {message[message.length - 1]?.message}

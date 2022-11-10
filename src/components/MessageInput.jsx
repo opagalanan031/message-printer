@@ -37,7 +37,7 @@ function MessageInput() {
         <form onSubmit={onSubmit}>
           <div className='row w-75 mx-auto my-4'>
             <textarea
-              className='form-control-lg border border-3'
+              className='form-control-lg border border-3 border-secondary shadow-sm'
               rows='10'
               cols='80'
               placeholder='Enter your message here...'
